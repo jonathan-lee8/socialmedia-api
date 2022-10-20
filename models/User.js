@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 // const { stringify } = require('querystring');
-const thoughtSchema = require('./Thoughts')
+// const thoughtSchema = require('./Thoughts')
 
 // Schema to create Student Model
 const userSchema = new Schema(
@@ -17,14 +17,13 @@ const userSchema = new Schema(
       unique: true,
       match: [/.+@.+\..+/, "Must match an email address!"],
     },
-    // thoughts: [
-    //   {
-    //     type: Schema.Types.ObjectId,
-    //     ref: "Thoughts"
-    //   },
-    // ],
-    thoughts: [thoughtSchema],
-
+    thoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Thoughts"
+      },
+    ],
+    // thoughts: [thoughtSchema],
     friends: [
       {
         type: Schema.Types.ObjectId,

@@ -1,6 +1,7 @@
-const { Timestamp } = require('bson');
+// const { Timestamp } = require('bson');
 const { Schema, model } = require('mongoose');
-const { stringify } = require('querystring');
+// const { stringify } = require('querystring');
+const reactionSchema = require('./Reaction')
 
 // Schema to create a Thought model
 const thoughtSchema = new Schema(
@@ -26,17 +27,19 @@ const thoughtSchema = new Schema(
         ref: "Reaction",
       },
     ],
+    // reaction: [reactionSchema],
   },
   {
     toJSON: {
       virtuals: true,
+      getters: true,
     },
     id: false,
   }
 );
 
 thoughtSchema.virtual('reactionCount').get(function() {
-  return this.reactions.length;
+  return this.reaction.length;
 });
 
 const Thoughts = model("Thoughts", thoughtSchema);
