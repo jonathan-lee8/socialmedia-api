@@ -23,7 +23,7 @@ User can:
 etc.
 
 [View all routes/requests here](./assets/screenshots/insomnia_overview.png)
-[](./assets/screenshots/insomnia_overview.png)
+![](./assets/screenshots/insomnia_overview.png)
 
 ## Technologies
 - JavaScript
