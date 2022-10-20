@@ -14,7 +14,7 @@ Please navigate to Insomnia as well.
 
 ## Usage
 
-Users can play with various options this web application provides using Insomnia. We can create, update, delete, and add users, friends, thoughts, and reactions. Please refer to the screenshot below to explore the potential options a user can pass through in Insomnia. All options on the left column are requests a user can make. \
+Users can play with various options this web application provides using Insomnia. We can create, update, delete, and add users, friends, thoughts, and reactions. Please refer to the screenshot below to explore the potential options a user can pass through in Insomnia. All options on the left column are requests a user can make.
 
 User can:
 - create users, thoughts;
@@ -22,7 +22,7 @@ User can:
 - update user information
 etc.
 
-[](./assets/screenshots/insomnia%20overview.png)
+[alt-text-here](./assets/screenshots/insomnia_overview.png)
 
 ## Technologies
 - JavaScript
