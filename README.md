@@ -22,7 +22,8 @@ User can:
 - update user information
 etc.
 
-[alt-text-here](./assets/screenshots/insomnia_overview.png)
+[View all routes/requests here](./assets/screenshots/insomnia_overview.png)
+[](./assets/screenshots/insomnia_overview.png)
 
 ## Technologies
 - JavaScript
