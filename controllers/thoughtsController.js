@@ -32,7 +32,7 @@ module.exports = {
 
       // Delete a thoughts
   deleteThoughts(req, res) {
-    Thoughts.findOneAndDelete({ _id: req.params.thoughtsId })
+    Thoughts.findOneAndDelete({ _id: req.params.thoughtId })
       .then((thoughts) =>
         !thoughts
           ? res.status(404).json({ message: 'No thoughts with that ID' })
@@ -45,7 +45,7 @@ module.exports = {
   // Update a thoughts
   updateThoughts(req, res) {
     Thoughts.findOneAndUpdate(
-      { _id: req.params.thoughtsId },
+      { _id: req.params.thoughtId },
       { $set: req.body },
       { runValidators: true, new: true }
     )
