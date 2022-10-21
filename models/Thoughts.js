@@ -21,13 +21,13 @@ const thoughtSchema = new Schema(
       type: String,
       required: true,
     },
-    reactions: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Reaction",
-      },
-    ],
-    // reaction: [reactionSchema],
+    // reactions: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "Reaction",
+    //   },
+    // ],
+    reaction: [reactionSchema],
   },
   {
     toJSON: {
