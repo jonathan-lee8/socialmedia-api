@@ -37,3 +37,5 @@ etc.
 
 MIT LICENSE
 
+![](./assets/screenshots/tutorial.gif)
+

@@ -5,6 +5,8 @@ module.exports = {
   // get ALL users
   getUsers(req, res) {
     User.find()
+    .populate('friends')
+    .populate('thoughts')
     .then((users) => res.json(users))
     .catch((err) => res.json(500).json(err));
       },
@@ -54,12 +56,16 @@ module.exports = {
   // delete user
   deleteUser(req, res) {
     User.findOneAndDelete({ _id: req.params.userId })
-    .then((user) =>
-    !user
-    ? res.status(404).json({ message: 'No user with this ID' })
-    : Application.deleteMany({ _id: { $in: user.applications } })
-    )
-    .then(() => res.json({ message: 'User is now deleted! '}))
+    .then((user) => {
+      if (!user) {
+        return res.status(404).json({ message: 'No user with this ID' });
+      }
+    })
+    // !user
+    // ? res.status(404).json({ message: 'No user with this ID' })
+    // : Application.deleteMany({ _id: { $in: user.application } })
+    // )
+    .then(() => res.json({ message: 'User is now deleted!'}))
     .catch((err) => res.json(500).json(err));
   },
 
